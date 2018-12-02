@@ -1,0 +1,61 @@
+<div class="install">
+    <h1>NodeJS</h1>
+    <div class="nodejs">
+        <h3>Installation Steps</h3>
+        <p>1. Download the Windows installer from <a href="https://nodejs.org/en/">Nodes.js</a>website.</p>
+        <p>2. Run the installer (the .msi file you downloaded in the previous step.)</p>
+        <p>3. Follow the prompts in the installer.</p>
+        <p>4. Restart your computer. You won't be able to run Node.js until you restart your computer.</p>
+        <br>
+        <hr>
+    </div>
+
+    <h1>Express</h1>
+    <div class="express">
+        <p>Assuming you’ve already installed Node.js, create a directory to hold your application, and make that your working directory.</p>
+        <p><code>mkdir myapp</code></p>
+        <p><code>cd myapp</code></p>
+        <p>Use the npm init command to create a package.json file for your application. For more information on how package.json works, see Specifics of npm’s package.json handling.</p>
+        <p><code>npm init</code></p>
+        <p>This command prompts you for a number of things, such as the name and version of your application. For now, you can simply hit RETURN to accept the defaults for most of them, with the following exception:</p>
+        <p><code>entry point: (index.js)</code></p>
+        <p>Enter app.js, or whatever you want the name of the main file to be. If you want it to be index.js, hit RETURN to accept the suggested default file name.</p>
+        Now install Express in the myapp directory and save it in the dependencies list. For example:
+        <p><code>npm install express --save</code></p>
+        <p>To install Express temporarily and not add it to the dependencies list:</p>
+        <p><code>npm install express --no-save</code></p>
+        <br>
+        <hr>
+    </div>
+
+    <h1>AngularJS</h1>
+    <div class="angularjs">
+        <h3>Prerequisites:</h3>
+        <p>Before you begin, make sure your development enviorment includes Node.JS and npm package manager.</p>
+
+        <h3>Install the Angular CLI</h3>
+        <p>You use the Angular CLI to create projects, generate applications and library code, and perform a variety of ongoing development task such as testing, bundling , and development.</p>
+        <p> Install the Angular CLI globablly.</p>
+        <p>To install the CLI using npm, open a terminal/console window and enter the following command:</p>
+        <br>
+        <code>npm install -g @angular/cli</code>
+        <br>
+        <br>
+        <hr>
+    </div>
+
+    <h1>MongoDB</h1>
+    <div class="mongodb">
+        <h3>Install MongoDB</h3>
+        <p>Download the current stable release of <a href="https://www.mongodb.com/download-center">MongoDB</a> and install using the complete setup type and all the default options.</p>
+
+        <h3>Create the MongoDB data directory</h3>
+        <p>Create and empty folder at: "C:\data\db".</p>
+        <p>MongoDB requires a directory for storing all of it's data, the default directory is "C:\data\db", you can use a different directory if you prefer by specifying the "--dbpath" parameter when starting the MongoDB server (below).</p>
+        <h3>Start MongoDB Server</h3>
+        <p>Start the MongoDB server by running "mongod.exe" from the command line, "mongod.exe" is located in "C:\Program Files\MongoDB\Server\[MONGODB VERSION]\bin", for example for version 3.2 the following command will start MongoDB:</p>
+        <code>C:\Program Files\MongoDB\Server\3.2\bin\mongod</code>
+        <br>
+        <hr>
+    </div>
+</div>
