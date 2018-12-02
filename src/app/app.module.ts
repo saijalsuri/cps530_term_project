@@ -11,6 +11,17 @@ import { ContributionComponent } from './contribution/contribution.component';
 import { AboutComponent } from './about/about.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 
+const routes: Routes = [
+  { path: 'install', component: InstallComponent},
+  { path: 'example', component: ExampleComponent},
+  { path: 'experience', component: ExperienceComponent},
+  { path: 'contribution', component: ContributionComponent},
+  { path: 'about', component: AboutComponentt},
+  { path: 'tutorial', component: TutorialComponent},
+  { path: '', redirectTo: '', pathMatch: 'full'}
+
+];
+
 @NgModule({
   declarations: [
     AppComponent,
