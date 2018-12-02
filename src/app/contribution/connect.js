@@ -1,7 +1,12 @@
-const mongoose = require('mongoose')
-process.env.MONGODB == mongodb://admin:givemeaccess01@ds113849.mlab.com:13849/mydb
-mongoose.connect(process.env.MONGODB);
-mongoose.connection.on('error', function () {
-  console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
-  process.exit(1);
-});
+const mongo = require('mongodb').MongoClient
+function doConnect() {
+ 	var url = 'mongodb:/admin:givemeaccess01@ds113849.mlab.com:13849/mydb'
+	mongo.connect(url, (err, db) => {
+		if(err) { 
+			throw err
+		} else {
+			console.log('Successfully connected to MongoDB')
+		}
+	})
+}
+doConnect()
