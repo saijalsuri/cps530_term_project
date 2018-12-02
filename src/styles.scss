@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: 30% auto;
+
+    a {
+        color: white;
+    }
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+div.angularjs {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+div.nodejs {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+div.mongodb {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+div.express {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+.rating {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table.table-rating,td,th {
+    margin: 0 auto;
+    align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.conclusion-name {
+    background-color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 4px;
+}
