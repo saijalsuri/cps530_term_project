@@ -1,3 +1,17 @@
+<script>
+const mongo = require('mongodb').MongoClient;
+function doConnect() {
+ 	var url = 'mongodb:/admin:givemeaccess01@ds113849.mlab.com:13849/mydb';
+	mongo.connect(url, (err, db) => {
+		if(err) { 
+			console.log(err);
+		} else {
+			alert("Successfully saved comment in database!");
+		}
+	})
+}
+
+</script>
 <h1>Contributors and there Responsibilities</h1>
 <div>
     <h3>Frontend: AngularJS</h3>
@@ -11,7 +25,7 @@
     <ul>
         <li>Saijal Suri</li>
     </ul>
-    <form action="connect.js">
+    <form action="doConnect()">
     
   <h3>Contact Us:</h3>
   First name:
