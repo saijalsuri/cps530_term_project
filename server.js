@@ -13,7 +13,7 @@ app.set('views', path.join(__dirname, 'src'));
 app.set('view enginer', 'ejs');
 app.engine('html', require('ejs').renderFile);
 // angular  dist -- VERY IMPORTANT
-app.use(express.static(__dirname + '/dist/'));
+app.use(express.static(__dirname + '/dist/index.html'));
 // body bodyParser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
