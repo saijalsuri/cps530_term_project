@@ -13,12 +13,10 @@ app.set('views', path.join(__dirname, 'src'));
 app.set('view enginer', 'ejs');
 app.engine('html', require('ejs').renderFile);
 // angular  dist -- VERY IMPORTANT
-app.use(express.static(__dirname + '/dist/index.html'));
+app.use(express.static(__dirname + '/src/app/'));
 // body bodyParser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-// routes
-app.use('/', index);
 // port.
 var server = app.listen(process.env.PORT || 8080, function () {
 var port = server.address().port;
