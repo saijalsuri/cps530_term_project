@@ -1,7 +1,7 @@
 <script>
 const mongo = require('mongodb').MongoClient;
 function doConnect() {
- 	var url = 'mongodb:/admin:givemeaccess01@ds113849.mlab.com:13849/comments';
+ 	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
 	mongo.connect(url, (err, db) => {
 		if(err) { 
 			console.log(err);
