@@ -17,7 +17,6 @@ const forceSSL = function() {
     next();
   }
 }
-
 // Instruct the app
 // to use the forceSSL
 // middleware
@@ -31,21 +30,6 @@ app.listen(process.env.PORT || 8080);
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
-app.get('/contribution', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/contribution/contribution.component.html'));
-});
-app.get('/about', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/about/about.component.html'));
-});
-app.get('/example', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/example/example.component.html'));
-});
-app.get('/experience', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/experience/experience.component.html'));
-});
-app.get('/install', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/install/install.component.html'));
-});
-app.get('/tutorial', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/tutorial/tutorial.component.html'));
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/'));
 });
