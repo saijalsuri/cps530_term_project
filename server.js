@@ -1,10 +1,12 @@
+var express = require('express');
+var http = require('http');
+
 var app = express();
-var path = require('path');
+var server = http.createServer(app);
 
-
-app.use(express.static(path.join(__dirname, 'app')));
-
-    var server = app.listen(process.env.PORT || 5000), function() {
-        var port = server.address().port;
-        console.log("Express is working on port " + port);
+app.get('/', function(req, res) {
+    res.send("Hello World!");
 });
+
+server.listen(process.env.PORT | 3000);
+console.log('Express server started on port %s', server.address().port);
