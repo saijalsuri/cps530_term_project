@@ -31,6 +31,21 @@ app.listen(process.env.PORT || 8080);
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend'));
+app.get('/contribution', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/contribution/contribution'));
+});
+app.get('/about', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/about/about'));
+});
+app.get('/example', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/example/example'));
+});
+app.get('/experience', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/experience/experience'));
+});
+app.get('/install', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/install/install'));
+});
+app.get('/tutorial', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/tutorial/tutorial'));
 });
