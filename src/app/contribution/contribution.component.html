@@ -1,17 +1,3 @@
-<script>
-const mongo = require('mongodb').MongoClient;
-function doConnect() {
- 	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
-	mongo.connect(url, (err, db) => {
-		if(err) { 
-			console.log(err);
-		} else {
-			alert("Successfully saved comment in database!");
-		}
-	})
-}
-
-</script>
 <h1>Contributors and there Responsibilities</h1>
 <div>
     <h3>Frontend: AngularJS</h3>
@@ -39,3 +25,17 @@ function doConnect() {
   <input type="submit" value="Submit">
 </form> 
 </div>
+<script>
+const mongo = require('mongodb').MongoClient;
+function doConnect() {
+ 	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
+	mongo.connect(url, (err, db) => {
+		if(err) { 
+			console.log(err);
+		} else {
+			alert("Successfully saved comment in database!");
+		}
+	})
+}
+
+</script>
