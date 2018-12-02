@@ -44,7 +44,7 @@ app.get('/experience', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/frontend/experience/experience'));
 });
 app.get('/install', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/install/install'));
+  res.sendFile(path.join(__dirname + '/dist/frontend/install'));
 });
 app.get('/tutorial', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/frontend/tutorial/tutorial'));
