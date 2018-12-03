@@ -43,12 +43,6 @@ var nameSchema = new mongoose.Schema({
 
 var Comment = mongoose.model("Comment", nameSchema);
 
-// For all GET requests, send back index.html
-// so that PathLocationStrategy can be used
-app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/frontend/'));
-});
-
 const mongo = require('mongodb').MongoClient;
  	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
 	mongo.connect(url, (err, db) => {
@@ -60,6 +54,12 @@ const mongo = require('mongodb').MongoClient;
 			
 		}
 	});
+
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/frontend/'));
+});
 
 app.post("/createComment", (req, res) => {
   var myData = new Comment(req.body);
