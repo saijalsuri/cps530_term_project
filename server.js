@@ -60,8 +60,7 @@ app.post("/createComment", (req, res) => {
   var myData = new Comment(req.body);
   myData.save()
     .then(item => {
-      res.sendFile(path.join(__dirname + '/dist/frontend/'));
-      console.log("The new comment was successfully saved to the database!");
+      res.send("Thank you for your message! It has been recorded in our MongoDB database and we will respond ASAP!");
     })
     .catch(err => {
       res.status(400).send("unable to save to database");
