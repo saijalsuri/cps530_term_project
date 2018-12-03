@@ -24,10 +24,10 @@
             <td>+ Realtime preview</td>
         </tr>
     </table>
-    <p>Angular 7 was a really nice framework to work with. It had simple installation process which didnt take too long to install and get right into making a simple web application. However it does have the problem of having quite a few directories to navigate but in the end it was doable. Compared to HTML/CSS/Javascript/PHP the learning curve would be a little steep for people who has little to no experience with HTML/CSS/Javascript/PHP but because Angular.js is widely used there are a ton of helpful tutorials that can help you achieve what you want in the web application. In the end in my opinion I would keep using the Angular framework as the experience was quite and experience that was hard a first but rewarding once everything worked.</p>
+    <p>Angular 7 was a really nice framework to work with. It had simple installation process which didnt take too long to install and get right into making a simple web application. However it does have the problem of having quite a few directories to navigate but in the end it was doable. Compared to HTML/CSS/Javascript/PHP the learning curve would be a little steep for people who has little to no experience with HTML/CSS/Javascript/PHP but because Angular.js is widely used there are a ton of helpful tutorials that can help you achieve what you want in the web application. In the end in my opinion I would keep using the Angular framework as the experience was quite and experience that was hard a first but rewarding once everything worked.</p>   
     
     <h2>Node.js</h2>
-    <mark class="rating">Rating: ? / 5</mark>
+    <mark class="rating">Rating: 4 / 5</mark>
     <br>
     <br>
     <table class="table-rating">
@@ -36,14 +36,28 @@
             <th>CONS</th>
         </tr>
         <tr>
-            <td>+ Positive Point</td>
-            <td>- Negative Point</td>
+            <td>+ Easy to learn</td>
+            <td>- Unstable API because it lacks consistency due to frequent backwards-incompatible API changes</td>
+        </tr>
+        <tr>
+            <td>+ JavaScript full stack</td>
+            <td>- Increased development time since it provides very little rules/restrictions and everything has to be coded from scratch</td>
+        </tr>
+        <tr>
+            <td>+ Eliminates need to learn and integrate a different server-side programming language</td>
+            <td>- Not suitable for heavy computing tasks because it doesn’t support multi-threaded programming</td>
+        </tr>
+        <tr>
+            <td>+ Flexibility since it doesn’t impose as many rules/guidelines like other frameworks such as Ruby on Rails etc. </td>
+        </tr>
+        <tr>
+            <td>+ Provides simultaneous request handling</td>
         </tr>
     </table>
-    <p>Conclusion</p>
+    <p>Node.js had the simplest implementation out of all of the backend components and the node package manager (npm) made installing all the backend modules and preparing the package.JSON file a lot easier.</p>
     
     <h2>express</h2>
-    <mark class="rating">Rating: ? / 5</mark>
+    <mark class="rating">Rating: 4 / 5</mark>
     <br>
     <br>
     <table class="table-rating">
@@ -52,14 +66,30 @@
             <th>CONS</th>
         </tr>
         <tr>
-            <td>+ Positive Point</td>
-            <td>- Negative Point</td>
+            <td>+ Allows JavaScript both on frontend and backend</td>
+            <td>- Not much error handling support</td>
+        </tr>
+        <tr>
+            <td>+ Great for I/O request handling</td>
+            <td>- Poor memory management</td>
+        </tr>
+        <tr>
+            <td>+ Fast app development</td>
+        </tr>
+        <tr>
+            <td>+ Easy integration of third-party services and middleware</td>
+        </tr>
+        <tr>
+            <td>+ Easy to learn</td>
+        </tr>
+        <tr>
+            <td>+ Fast app development</td>
         </tr>
     </table>
-    <p>Conclusion</p>
+    <p>ExpressJS was easy to implement and great at bringing together the front and back end of the application. </p>
     
-    <h2>MongoDB</h2>
-    <mark class="rating">Rating: ? / 5</mark>
+     <h2>MongoDB</h2>
+    <mark class="rating">Rating: 4 / 5</mark>
     <br>
     <br>
     <table class="table-rating">
@@ -68,9 +98,30 @@
             <th>CONS</th>
         </tr>
         <tr>
-            <td>+ Positive Point</td>
-            <td>- Negative Point</td>
+            <td>+ Don’t need a rigid schema</td>
+            <td>- NoSQL solutions not as strong in ACID (Atomic, Consistency, Isolation, Durability) as RDBMS</td>
+        </tr>
+        <tr>
+            <td>+ Horizontally scalable performance for high loads</td>
+            <td>- Complex transaction</td>
+        </tr>
+        <tr>
+            <td>+ Document oriented</td>
+            <td>- Not compatible with older software systems/architecture</td>
+        </tr>
+        <tr>
+            <td>+ High performance</td>
+            <td>- Not as much error-checking/data filtering due to schema-less implementation</td>
+        </tr>
+        <tr>
+            <td>+ Flexible since addition/deletion tasks have no impact on app</td>
+        </tr>
+        <tr>
+            <td>+ Easy integration with cloud tools and big data</td>
         </tr>
     </table>
-    <p>Conclusion</p>
+    <p>Running mongoDB locally was very easy and efficient, however deploying mongodb on heroku was a challenge. It required setting up a mlab account and connecting it to the MEAN application. Nevertheless, the schema-less implementation made inserting into the collection extremely easy and efficient, since a REST API could be used. This made integrating database functions with the frontend JavaScript/HTML very convenient. </p>
+    
+    <h2>Heroku Experience</h2>
+    <p>Deploying the MEAN stack application to Heroku was a far more tedious a process than we had initially intended. There were conflicts between port assignments and initializing production builds in the server.js file.  We fixed this by using process.env.PORT || 3000. process.env.PORT is a Heroku environmental variable  that resolves to the port on which Heroku is running our app. Furthermore, using the server.js file to connect to and initialize the post/get methods to access the database was also a struggle, as the local implementation did not require this extra step. All in all, the MEAN stack portion of the app development was very efficient, flexible and quick, in comparison to the deployment process onto Heroku. </p>
 </div>

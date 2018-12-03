@@ -1,3 +1,147 @@
-<p>
-  tutorial works!
+<h1>A short tutorial on Angular 6</h1>
+
+<p id="attention">
+	Before starting to learn Angular, you will need to download nodeJS, 
+	make sure you everything installed.
 </p>
+
+<h2>Setting up your workspace</h2>
+
+<p class="text">
+	First open a cmd command line window, move to your working directory and create a new project with the following command:
+</p>
+
+<pre>
+	ng new ng6 --style=css --routing
+</pre>
+
+<p class="text">
+	The style flag "--style = css" means we are planning to use css to style our page <br/>
+	The routing flag "--routing" means we want a project with different page urls.
+</p>
+
+<p class="text">
+	After this command, a new folder named ng6 will be created in the current directory <br/>
+	Again, in the cmd command line window, use the following command to move into the folder that we just created:
+</p>
+
+<pre>
+	cd ng6
+</pre>
+
+<p class="text">
+	Now we are in the ng6 folder, 
+</p>
+
+<p class="text">
+	In order to see the project, we need to enter the following in the cmd command line. This command will open a new window with your default web browser, when every changes are made, this page will update immediately.
+</p>
+
+<pre>
+	ng serve -o 
+</pre>
+
+<h2>Generate a component</h2>
+
+<p class="text">
+	In the ng6 folder, run the following command to create a component called "example"
+</p>
+
+<pre>
+	ng generate component example
+</pre>
+
+<p class="text">
+	The CLI creates a folder, src/app/example/, and generates four files of the example.component. 
+</p>
+
+<ul>
+	<li>example.component.html</li>
+	<li>example.component.scss</li>
+	<li>example.component.spec.ts</li>
+	<li>example.component.ts</li>
+</ul>
+
+<p class="text">
+	example.component.ts file is as follow:
+</p>
+
+<pre>
+  <code [innerHTML]="code_ts"></code>
+</pre>
+
+<h2>Add import</h2>
+
+<p class="text">
+	Open the file example.component.ts, below the import, add another import as follow:
+</p>
+
+<pre>
+  <code [innerHTML]="code_example_import"></code>
+</pre>
+
+<h2>Add property</h2>
+<p class="text">
+	within "export class TutorialComponent" <br/>
+	We are storing two pieces of data: id and name.
+	Add an 'example' property as follow:
+</p>
+
+<pre>
+  <code [innerHTML]="code_example"></code>
+</pre>
+
+<h2>Completed example.component.ts</h2>
+<p class="text">
+	Your code should look something like this: 
+</p>
+
+<pre>
+  <code [innerHTML]="code_completed_example"></code>
+</pre>
+
+<h2>Add corresponding html </h2>
+<p class="text">
+	Add the corresponding html code to the file "example.component.html".
+</p>
+<pre>
+  &lt;h1&gt;The expecting output of the tutorial&lt;/h1&gt;
+  &lt;p&gt;&lt;strong&gt;First website with Angular:&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;ID number: 
+  <code [innerHTML]="code_id"></code>
+  &lt;/p&gt;
+
+  &lt;p&gt;Name:	
+  <code [innerHTML]="code_name"></code>
+  &lt;/p&gt;
+</pre>
+
+<h2>Verification</h2>
+
+<p class="text">
+	Check the example page to verify your first website with Angular.
+</p>
+
+<h2>Summary</h2>
+
+<ul>
+	<li>Used CGI to generate a component</li>
+	<li>Modified the .html file and the .ts file</li>
+	<li>With the .ts file, created a simple piece of data including id and name</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
