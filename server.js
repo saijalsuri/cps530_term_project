@@ -60,12 +60,13 @@ app.post("/createComment", (req, res) => {
   var myData = new Comment(req.body);
   myData.save()
     .then(item => {
-      res.send("item saved to database");
+      res.sendFile(path.join(__dirname + '/dist/frontend/'));
     })
     .catch(err => {
       res.status(400).send("unable to save to database");
     });
 });
+
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('*', function(req, res) {
