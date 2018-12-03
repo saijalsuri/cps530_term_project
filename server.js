@@ -60,7 +60,7 @@ app.post("/createComment", (req, res) => {
   var myData = new Comment(req.body);
   myData.save()
     .then(item => {
-      res.sendFile(path.join(__dirname + '/dist/frontend/contribution/'));
+      res.sendFile(path.join(__dirname + '/dist/frontend/'));
       console.log("The new comment was successfully saved to the database!");
     })
     .catch(err => {
