@@ -2,17 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mongo = require('mongodb').MongoClient;
- 	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
-	mongo.connect(url, (err, db) => {
-		if(err) { 
-			throw err;
-		} else {
-			console.log("YAYY");
-			alert("Successfully saved comment in database!");
-			
-		}
-	})
+
 
 // If an incoming request uses
 // a protocol other than HTTPS,
@@ -44,3 +34,15 @@ app.listen(process.env.PORT || 8080);
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/frontend/'));
 });
+
+const mongo = require('mongodb').MongoClient;
+ 	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
+	mongo.connect(url, (err, db) => {
+		if(err) { 
+			console.log(err);
+		} else {
+			console.log("YAYY");
+			alert("Successfully saved comment in database!");
+			
+		}
+	})
