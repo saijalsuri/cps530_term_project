@@ -46,3 +46,26 @@ const mongo = require('mongodb').MongoClient;
 			
 		}
 	});
+var nameSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  email: String,
+  comment: String,
+  status: { 
+	type: String,
+	default: "Open"
+  }
+});
+
+var Comment = mongoose.model("Comment", nameSchema);
+
+app.post("/createComment", (req, res) => {
+  var myData = new Comment(req.body);
+  myData.save()
+    .then(item => {
+      res.send("item saved to database");
+    })
+    .catch(err => {
+      res.status(400).send("unable to save to database");
+    });
+});
