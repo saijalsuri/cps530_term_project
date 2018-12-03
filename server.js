@@ -3,6 +3,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // If an incoming request uses
 // a protocol other than HTTPS,
@@ -29,9 +33,15 @@ app.use(express.static(__dirname + '/dist/frontend'));
 // Heroku port
 app.listen(process.env.PORT || 8080);
 
-var bodyParser = require('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+var nameSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String,
+  email: String,
+  comment: String,
+  status: String, default: "Open"
+});
+
+var Comment = mongoose.model("Comment", nameSchema);
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
@@ -50,15 +60,6 @@ const mongo = require('mongodb').MongoClient;
 			
 		}
 	});
-var nameSchema = new mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
-  comment: String,
-  status: String, default: "Open"
-});
-
-var Comment = mongoose.model("Comment", nameSchema);
 
 app.post("/createComment", (req, res) => {
   var myData = new Comment(req.body);
