@@ -29,6 +29,10 @@ app.use(express.static(__dirname + '/dist/frontend'));
 // Heroku port
 app.listen(process.env.PORT || 8080);
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('*', function(req, res) {
