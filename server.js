@@ -9,11 +9,27 @@ var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments");
 var nameSchema = new mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
-  comment: String,
-  status: String, default: "Open"
+  firstName: { 
+	type: String,
+	required: true
+  }
+  lastName: {
+	type: String,
+	required: true
+  }
+  email: { 
+	type: String,
+	required: true
+  }
+  comment: {
+	type: String,
+	required: true
+  }
+  status: {
+	type: String, 
+	required: true,
+	default: "Open"
+  }
 });
 var Comment = mongoose.model("Comment", nameSchema);
 // If an incoming request uses
