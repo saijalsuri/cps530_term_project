@@ -40,4 +40,9 @@ const mongo = require('mongodb').MongoClient;
 	mongo.connect(url, (err, db) => {
 		if(err) { 
 			console.log(err);
-	})
+		} else {
+			console.log("Successfully established MongoDB connection!");
+			
+			
+		}
+	});
