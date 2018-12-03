@@ -60,7 +60,7 @@ app.post("/createComment", (req, res) => {
   var myData = new Comment(req.body);
   myData.save()
     .then(item => {
-      res.sendFile(path.join(__dirname + '/dist/frontend/'));
+      res.sendFile(path.join(__dirname + '/dist/frontend/contribution'));
       console.log("The new comment was successfully saved to the database!");
     })
     .catch(err => {
@@ -69,7 +69,7 @@ app.post("/createComment", (req, res) => {
 });
 app.get("/comments", (req, res) => {
  
- Issue.find((err, issues) => {
+ Comment.find((err, issues) => {
         if (err)
             console.log(err);
         else
