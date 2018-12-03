@@ -67,7 +67,15 @@ app.post("/createComment", (req, res) => {
       res.status(400).send("unable to save to database");
     });
 });
-
+app.get("/comments", (req, res) => {
+ 
+ Issue.find((err, issues) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(issues);
+    });
+});
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('*', function(req, res) {
