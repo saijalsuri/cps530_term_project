@@ -6,7 +6,9 @@ const path = require('path');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments");
 
 // If an incoming request uses
 // a protocol other than HTTPS,
