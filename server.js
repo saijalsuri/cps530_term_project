@@ -61,6 +61,7 @@ app.post("/createComment", (req, res) => {
   myData.save()
     .then(item => {
       res.sendFile(path.join(__dirname + '/dist/frontend/'));
+      console.log("The new comment was successfully saved to the database!");
     })
     .catch(err => {
       res.status(400).send("unable to save to database");
