@@ -55,10 +55,7 @@ var nameSchema = new mongoose.Schema({
   lastName: String,
   email: String,
   comment: String,
-  status: { 
-	type: String,
-	default: "Open"
-  }
+  status: String, default: "Open"
 });
 
 var Comment = mongoose.model("Comment", nameSchema);
