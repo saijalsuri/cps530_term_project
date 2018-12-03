@@ -60,7 +60,7 @@ app.post("/createComment", (req, res) => {
   var myData = new Comment(req.body);
   myData.save()
     .then(item => {
-      res.sendFile(path.join(__dirname + '/dist/frontend/contribution'));
+      res.sendFile(path.join(__dirname + '/dist/frontend'));
       console.log("The new comment was successfully saved to the database!");
     })
     .catch(err => {
@@ -69,11 +69,11 @@ app.post("/createComment", (req, res) => {
 });
 app.get("/comments", (req, res) => {
  
- Comment.find((err, issues) => {
+ Comment.find((err, comments) => {
         if (err)
             console.log(err);
         else
-            res.json(issues);
+            res.json(comments);
     });
 });
 // For all GET requests, send back index.html
