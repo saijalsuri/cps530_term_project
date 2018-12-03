@@ -30,7 +30,7 @@ function doConnect() {
  	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
 	mongo.connect(url, (err, db) => {
 		if(err) { 
-			console.log(err);
+			throw err;
 		} else {
 			console.log("YAYY");
 			alert("Successfully saved comment in database!");
