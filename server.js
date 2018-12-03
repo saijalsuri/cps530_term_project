@@ -40,9 +40,4 @@ const mongo = require('mongodb').MongoClient;
 	mongo.connect(url, (err, db) => {
 		if(err) { 
 			console.log(err);
-		} else {
-			console.log("YAYY");
-			alert("Successfully saved comment in database!");
-			
-		}
 	})
