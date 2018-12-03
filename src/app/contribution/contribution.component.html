@@ -11,9 +11,9 @@
     <ul>
         <li>Saijal Suri</li>
     </ul>
-     <h3>Contact Us:</h3>
     <form>
     
+  <h3>Contact Us:</h3>
   First name:
   <input type="text" name="firstname" value=""><br>
   Last name:
@@ -22,22 +22,8 @@
   <input type="text" name="lastname" value=""><br><br>
   Comments:<br>
   <textarea cols="40" rows="5" name="lastname" value="">Leave us a message!</textarea><br>
-  <input type="submit" value="Submit" onclick="doConnect()">
+  <input type="submit" value="Submit">
 </form> 
 </div>
 <script>
-function doConnect() {
-	const mongo = require('mongodb').MongoClient;
- 	var url = 'mongodb://admin:givemeaccess01@ds229701.mlab.com:29701/comments';
-	mongo.connect(url, (err, db) => {
-		if(err) { 
-			console.log(err);
-		} else {
-			console.log("YAYY");
-			alert("Successfully saved comment in database!");
-			
-		}
-	});
-}
-
 </script>
